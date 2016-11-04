@@ -1,0 +1,22 @@
+#!/bin/bash
+# argument one should be the video 
+# that you want to be displayed
+# hard coded to be display=:0
+
+echo "Filename $1" 
+echo "Audio track $2"
+
+# if first argument empty
+if [ -z "$1" ];then
+echo "failed to supplie a video file"
+exit
+fi
+
+if [ -n "$1" ]; then
+DISPLAY=:0 nohup vlc $1 --fullscreen --audio-track=$2 &
+else
+DISPLAY=:0 nohup vlc $1 --fullscreen &
+fi
+
+echo "Enjoy the show"
+exit 1

@@ -35,8 +35,10 @@ exit
 fi
 
 if [ -n "$1" ]; then
+# used to select audio tracks
 DISPLAY=:0 nohup vlc $1 --fullscreen --audio-track=$2 &
 else
+# if there was no audio track supplied
 DISPLAY=:0 nohup vlc $1 --fullscreen &
 fi
 

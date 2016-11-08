@@ -25,8 +25,8 @@
 # that you want to be displayed
 # hard coded to be display=:0
 
-host = 192.168.1.1
-port = 16050
+host="192.168.1.1"
+port="16050"
 
 echo "Filename $1" 
 echo "Audio track $2"
@@ -37,8 +37,8 @@ echo "failed to supplie a video file"
 exit 1
 fi
 
-if [-n "$3"];then
-    if [ $2=="-1"];then
+if [ -n "$3" ];then
+    if [ $2 == "-1" ];then
     DISPLAY=:0 nohup vlc $1 --http-host $host --http-port $port --http-password $3 --fullscreen &
     else
     DISPLAY=:0 nohup vlc $1 --http-host $host --http-port $port --http-password $3 --fullscreen --audio-track=$2 &

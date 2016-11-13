@@ -37,8 +37,13 @@ echo "failed to supplie a video file"
 exit 1
 fi
 
+<<<<<<< HEAD
 if [ -n "$3" ]; then
     if [ $2 == "-1" ]; then
+=======
+if [ -n "$3" ];then
+    if [ $2 == "-1" ];then
+>>>>>>> d8980c2a78942d637f6095d376189d13b4f8de1a
     DISPLAY=:0 nohup vlc $1 --http-host $host --http-port $port --http-password $3 --fullscreen &
     else
     DISPLAY=:0 nohup vlc $1 --http-host $host --http-port $port --http-password $3 --fullscreen --audio-track=$2 &

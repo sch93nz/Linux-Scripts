@@ -17,13 +17,6 @@ def application(environ, start_response):
 	<br />
 	<h1 id="Title">Wellington Radio Yacht Club - New Zealand</h1>
 </div>
-<!--Link set so the banner of links just below the title block-->
-</div>
-<!-- the left and right colums of the body-->
-<div id="Body">
-
-	</div>
-</div>
 
 </body>
 

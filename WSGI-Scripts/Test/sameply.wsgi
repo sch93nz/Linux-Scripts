@@ -22,7 +22,7 @@ def application(environ, start_response):
 
 </html>'''
 
-    response_headers = [('Content-type', 'text/plain'),
+    response_headers = [('Content-type', 'html'),
                         ('Content-Length', str(len(output)))]
     start_response(status, response_headers)
     

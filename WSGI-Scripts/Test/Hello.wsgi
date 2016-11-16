@@ -9,4 +9,5 @@ def application(environ, start_response):
     start_response('200 OK', [('Content-Type', 'text/html')])
 
     output = '''Hello %(subject)s Hello %(subject)s!''' % {'subject': subject}
-    return [b""+output]
+    output = str.encode(output)
+    return [output]

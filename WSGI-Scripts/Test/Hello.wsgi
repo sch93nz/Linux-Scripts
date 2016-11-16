@@ -7,4 +7,6 @@ def application(environ, start_response):
     else:
         subject = 'World'
     start_response('200 OK', [('Content-Type', 'text/html')])
-    return [b'''Hello %(subject)s Hello %(subject)s!''' % {'subject': subject}]
+
+    output = '''Hello %(subject)s Hello %(subject)s!''' % {'subject': subject}
+    return [b""+output]

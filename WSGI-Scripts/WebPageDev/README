@@ -1,0 +1,16 @@
+So the plan is  pyhton inheritance if i can use it to build a
+idea or passing system that will build the webpage much like
+a xml passer.
+
+the python inheritance looks simple enough so this should go fine.
+
+Possible class require:
+    image
+    text
+    title
+    banner
+    line break
+    bar
+    div
+
+fun things will be making them able to contain elements into themself.

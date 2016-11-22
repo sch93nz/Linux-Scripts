@@ -31,6 +31,37 @@ class A(object):
 
         return output
 
+class P(object):
+    ID = 0
+    text = ""
+    webChildren = list()
+    
+
+    def __init__(self,words):
+        self.webChildren=[]
+        self.ID =random.getrandbits(16)
+        self.text = words
+
+    def getOpening(self):
+        output = '''\r\n<p'''
+        output += ''' style="'''
+        return output+'''">'''
+
+    def getEnding(self):
+        return '''</p>'''
+
+    def webString(self):
+
+        output = self.getOpening()
+        output += self.text
+        
+        for item in self.webChildren:
+            output+=item.webString()
+
+        output+=self.getEnding()
+
+        return output
+
 class H1(object):
     ID = 0
     text = ""

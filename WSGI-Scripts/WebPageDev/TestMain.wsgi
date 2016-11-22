@@ -14,6 +14,8 @@ def startTest():
     a.add2Body(b)
     b.add(br())
     b.add(H2("this fixed"))
+    b.add(br())
+    b.add(P("so this a test paragraph for as to read to make sure its all going correctly."))
     
 
     print(a.webString())

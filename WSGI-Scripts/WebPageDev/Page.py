@@ -2,8 +2,7 @@
 
 class Title(object):
     text = ""
-    webChildren = list()
-
+  
     def __init__(self,words):
         self.text = words
 
@@ -18,9 +17,6 @@ class Title(object):
 
         output = self.getOpening()
         output += self.text
-        for item in self.webChildren:
-            output+=item.getbody
-
         output+=self.getEnding()
 
         return output
@@ -42,7 +38,7 @@ class Head(object):
             output = self.getOpening(self)
 
             for item in self.webChildren:
-                #type(item.WebSting(object))
+              
                 output+=item.webString()
 
             output+=self.getEnding(self)

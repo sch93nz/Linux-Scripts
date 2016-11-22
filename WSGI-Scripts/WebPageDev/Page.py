@@ -67,7 +67,7 @@ class Body(object):
             output = self.getOpening(self)
 
             for item in self.webChildren:
-                output+=item.webString(item)
+                output+=item.webString()
 
             output+=self.getEnding(self)
 
@@ -77,6 +77,7 @@ class Page(object):
 
         head = Head
         body = Body
+
         def __init__(self,title):
             self.head.add(self.head,Title(title))
 
@@ -84,7 +85,7 @@ class Page(object):
             self.head.add(self.head,item)
 
         def add2Body(self,item):
-            self.body.add(self.nody,item)
+            self.body.add(self.body,item)
 
         def getOpening(self):
             return '''<!DOCTYPE html>\r\n<html>'''
@@ -97,6 +98,7 @@ class Page(object):
             output = self.getOpening()
 
             output+= self.head.webString(self.head)
+
             output+= self.body.webString(self.body)
 
             output+=self.getEnding()

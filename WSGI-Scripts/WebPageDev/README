@@ -1,16 +1,5 @@
-So the plan is  pyhton inheritance if i can use it to build a
-idea or passing system that will build the webpage much like
-a xml passer.
+so the plan is now to just build a bunch of class that run off of objects and link them all to geather as the
+inheartance was weird and i couldn't figure out how to do abstract meathods in the time fram i was wanting.
 
-the python inheritance looks simple enough so this should go fine.
+so we have jsut gone for each tag is a class and i will build them each from the ground up eg. lots of copy pasting
 
-Possible class require:
-    image
-    text
-    title
-    banner
-    line break
-    bar
-    div
-
-fun things will be making them able to contain elements into themself.
